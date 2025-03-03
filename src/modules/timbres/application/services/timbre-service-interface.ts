@@ -1,7 +1,7 @@
 export interface ITimbreServiceInterface {
-    findAll(): any[]
+    findAll(): Promise<any[]>
     find(id: string): any[] | null
-    create(data: any): any[] | null
+    create(data: any): Promise<any | null>
     delete(id: string): boolean
 }
 

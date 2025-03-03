@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { TimbreService } from "../services/timbre-service";
+import { TimbreService } from "../services/timbre.service";
 
 @Injectable()
 export class TimbreUseCase {
@@ -7,5 +7,10 @@ export class TimbreUseCase {
     findAllTimbres() {
         const timbres = this.timbreService.findAll()
         return timbres
+    }
+
+    async create() {
+        const timbre = await this.timbreService.create({})
+        return timbre
     }
 }
