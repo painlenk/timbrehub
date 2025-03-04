@@ -1,13 +1,12 @@
 import { Injectable } from "@nestjs/common";
-import { UserEntity } from "../domain/user.entity";
+import { UserService } from "../services/user.service";
+
 
 @Injectable()
 export class UserUseCase {
-    constructor() { }
+    constructor(private readonly userService: UserService) { }
 
     async createUser(user: any) {
-        const userToCreate = new UserEntity(user.name, user.email, user.password)
-        const userCreated = userToCreate.getUser()
-
+        return await this.userService.createUser(user.name, user.email, user.password)
     }
 }

@@ -16,14 +16,7 @@ export class TimbreService implements ITimbreServiceInterface {
     }
 
     async create(data: any): Promise<any | null> {
-        const teste = await this.prismaService.user.create({
-            data: {
-                name: 'teste teste',
-                email: 'teste@teste.com',
-            }
-        })
-
-        return teste
+        return null
     }
 
     delete(id: string): boolean {
