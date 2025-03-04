@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
-import { TimbreController } from "./infra/controllers/timbres.controller";
-import { TimbreUseCase } from "./uses-cases/timbre-use-case";
+import { TimbreController } from "../infra/controllers/timbres.controller";
+import { TimbreUseCase } from "./use-cases/timbre.use-case";
 import { TimbreService } from "./services/timbre.service";
 import { PrismaModule } from "src/shared/infra/prisma/prisma.module";
 

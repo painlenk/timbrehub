@@ -1,5 +1,5 @@
 import { Controller, Get, Post } from '@nestjs/common'
-import { TimbreUseCase } from '../../uses-cases/timbre-use-case'
+import { TimbreUseCase } from '../../application/use-cases/timbre.use-case'
 
 @Controller('/timbres')
 export class TimbreController {

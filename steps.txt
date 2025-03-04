@@ -1,0 +1,11 @@
+[x] iniciar o projeto
+[x] definir o banco de dados a ser utilizado
+    mongoDB
+[x] criar a rota que ira listar todos os timbres
+[x] criar a service de timbres
+[x] criar a use-case de timbre
+[x] criar o module de timbre
+
+implementação
+[x] implementar o banco mongoDB com prisma
+

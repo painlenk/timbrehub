@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { ITimbreServiceInterface } from "./timbre-service-interface";
-import { PrismaService } from "src/shared/infra/prisma/timbre.service";
+import { PrismaService } from "src/shared/infra/prisma/prisma.service";
 
 @Injectable()
 export class TimbreService implements ITimbreServiceInterface {
