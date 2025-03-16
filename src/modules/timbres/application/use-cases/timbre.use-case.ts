@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { TimbreService } from "../services/timbre.service";
+import { CreateTimbreDto } from "../../dto/create-timbre.dto";
 
 @Injectable()
 export class TimbreUseCase {
@@ -9,8 +10,8 @@ export class TimbreUseCase {
         return timbres
     }
 
-    async create() {
-        const timbre = await this.timbreService.create({})
+    async create(data: CreateTimbreDto) {
+        const timbre = await this.timbreService.create(data)
         return timbre
     }
 }

@@ -1,5 +1,6 @@
-import { Controller, Get, Post } from '@nestjs/common'
+import { Controller, Get, Post, Body } from '@nestjs/common'
 import { TimbreUseCase } from '../../application/use-cases/timbre.use-case'
+import { CreateTimbreDto } from '../../dto/create-timbre.dto'
 
 @Controller('/timbres')
 export class TimbreController {
@@ -11,7 +12,7 @@ export class TimbreController {
     }
 
     @Post('/create')
-    create() {
-        return this.timbreUseCase.create()
+    create(@Body() createTimbreDto: CreateTimbreDto) {
+        return this.timbreUseCase.create(createTimbreDto)
     }
 }
